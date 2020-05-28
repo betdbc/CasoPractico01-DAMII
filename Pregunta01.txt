@@ -1,0 +1,68 @@
+import Foundation
+
+public class Servicio
+{
+    
+    var Nombre: String = ""
+    var Apellido: String = ""
+    var Dni: String = ""
+    var NombreServicio: String = ""
+    var Codigo: String = ""
+    var CostoS: Double = 0.0
+    var CostoI: Double = 0.0
+    var Descuento: Double = 0.0 
+    var Total: Double = 0.0 
+    
+     init()
+    {
+        Nombre=""
+        Apellido=""
+        Dni=""
+        NombreServicio=""
+        Codigo=""
+        CostoS = 0.0 
+        CostoI = 0.0 
+        Descuento = 0.0 
+        Total = 0.0
+    }
+    
+}
+
+var pServicio=Servicio();
+
+pServicio.Nombre = "Santiago "
+pServicio.Apellido = "Solis Vidal"
+pServicio.Dni = "41412717"
+pServicio.NombreServicio = "Internet Satelital 40mb"
+
+
+    if(pServicio.NombreServicio == "Internet 20mb"){
+        pServicio.CostoS = 100
+        pServicio.CostoI = 20.00
+        pServicio.Descuento = 100 * 5 / 100
+    }
+    
+    else if(pServicio.NombreServicio == "Internet 60mb"){
+         
+        pServicio.CostoS = 229
+        pServicio.CostoI = 20.00
+        pServicio.Descuento = 229 * 25 / 100
+    }
+    
+    else if(pServicio.NombreServicio == "Internet Satelital 40mb"){
+         
+        pServicio.CostoS = 180
+        pServicio.CostoI = 30.00
+        pServicio.Descuento = 180 * 10 / 100
+    }
+    
+      print("Cliente: \(pServicio.Nombre)\(pServicio.Apellido)")  
+      print("Dni: \(pServicio.Dni)")
+      print("Servicio: \(pServicio.NombreServicio)") 
+      print("Costo Servicio: \(pServicio.CostoS)")
+      print("Costo Instalacion: \(pServicio.CostoI)")
+      print("Descuento: \(pServicio.Descuento)")
+      print("Total: \((pServicio.CostoS + pServicio.CostoI) - pServicio.Descuento)")
+
+
+

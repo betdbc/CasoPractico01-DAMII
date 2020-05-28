@@ -1,0 +1,47 @@
+// Pregunta 02
+import Foundation
+public class MenuOffice
+{
+    var Menu: String=""
+    var Precio: Double=0.0
+    var Cantidad: Int=0
+    var Total: Double=0.0  
+    var Delivery: Bool=true
+    var Descuento: Double=0.0
+    var PagoTotal: Double=0.0
+}
+
+var pMenuOffice:MenuOffice
+pMenuOffice=MenuOffice()
+
+pMenuOffice.Menu="Arroz con Marizcos"
+pMenuOffice.Precio=25
+pMenuOffice.Cantidad=3
+pMenuOffice.Total=pMenuOffice.Precio * Double(pMenuOffice.Cantidad)
+pMenuOffice.Delivery=true
+
+
+var s=0.0
+if(pMenuOffice.Delivery==true){
+    s=7
+}else{
+   s=0
+}
+
+if(pMenuOffice.Total>40){
+    pMenuOffice.Descuento=pMenuOffice.Total*0.05
+}else{
+    pMenuOffice.Descuento=0
+}
+
+pMenuOffice.PagoTotal=(pMenuOffice.Total + s) - pMenuOffice.Descuento
+
+print("Menu:  \(pMenuOffice.Menu)")
+print("Precio:  \(pMenuOffice.Precio)")
+print("Cantidad:  \(pMenuOffice.Cantidad)")
+print("Total:  \(pMenuOffice.Total)")
+print("Delivery:  \(s)")
+print("Descuento:  \(pMenuOffice.Descuento)")
+print("Pago Total:  \(pMenuOffice.PagoTotal)")
+
+
